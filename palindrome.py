@@ -1,11 +1,8 @@
-a=int(input("emter a vlue"))
-rev=0
-temp=a
-while a!=0:
-	digit=a%10
-	rev=(rev*10)+digit
-	a=a//10
-if temp==rev:
-	print(f"{temp} is palindrome number")
-else :
-	print(f"{temp} is not a pailndrome")
+def is_palindrome(s):
+	s=s.replace(" ","").lower()
+	return s==s[::-1]
+string=input("enter  astring;")
+if is_palindrome(string):
+	print("palindrome")
+else:
+	print("not palindrome")
